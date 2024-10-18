@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Szyfr Cezara";
+}
+
+<h2>Szyfr Cezara</h2>
+
+<form method="post" asp-action="Caesar" asp-controller="Ciphers">
+    <div>
+        <label for="tekst">Tekst do przetworzenia:</label>
+        <input type="text" id="tekst" name="tekst" />
+    </div>
+    <div>
+        <label for="shift">Przesunięcie:</label>
+        <input type="number" id="shift" name="shift" />
+    </div>
+    <div>
+        <label for="decrypt">Deszyfracja:</label>
+        <input type="checkbox" id="decrypt" name="decrypt" value="true" />
+    </div>
+    <button type="submit">Przetwórz</button>
+</form>
+
+@if (ViewBag.ResultText != null)
+{
+<p>Wynik: @ViewBag.ResultText</p>
+}

@@ -1,0 +1,159 @@
+/* Ogólne style dla całej strony */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-family: 'Marcellus', serif;
+  font-size: 3em;
+  color: #ffd700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2c3e50;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background: url('https://example.com/marble-texture.jpg') no-repeat center center;
+  background-size: cover;
+  color: #333;
+  border-left: 5px solid #ffd700;
+  border-radius: 10px;
+}
+
+.hero h2 {
+  font-family: 'Marcellus', serif;
+  font-size: 2.5em;
+  color: #2c3e50;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+}
+
+.footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Stylizacje przycisków i elementów interaktywnych */
+button {
+  background-color: #ffd700;
+  color: #2c3e50;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #e5c100;
+}
+
+/* Stylizacje dla linków w treści */
+.container a {
+  color: #2c3e50;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.container a:hover {
+  color: #ffd700;
+}
+
+/* Dodatkowe dekoracje - greckie wzory */
+.greek-border {
+  border-top: 4px solid #ffd700;
+  border-bottom: 4px solid #ffd700;
+  padding: 10px 0;
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'Marcellus', serif;
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+/* Responsywność strony */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero img {
+    margin-bottom: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+} 

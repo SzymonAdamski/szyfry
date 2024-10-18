@@ -1,0 +1,30 @@
+﻿@{
+ViewData["Title"] = "Szyfr Polibiusza z Kluczem";
+}
+
+<h2>Szyfr Polibiusza z Kluczem</h2>
+
+<form method="post" asp-action="Polibius" asp-controller="Ciphers">
+    <div>
+        <label for="tekst">Tekst do przetworzenia:</label>
+        <input type="text" id="tekst" name="tekst" />
+    </div>
+    <div>
+        <label for="a">Klucz a:</label>
+        <input type="number" id="a" name="a" value="1" />
+    </div>
+    <div>
+        <label for="b">Klucz b:</label>
+        <input type="number" id="b" name="b" value="0" />
+    </div>
+    <div>
+        <label for="decrypt">Deszyfracja:</label>
+        <input type="checkbox" id="decrypt" name="decrypt" value="true" />
+    </div>
+    <button type="submit">Przetwórz</button>
+</form>
+
+@if (ViewBag.ResultText != null)
+{
+<p>Wynik: @ViewBag.ResultText</p>
+}
