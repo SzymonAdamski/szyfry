@@ -225,3 +225,4 @@ D:\Users\szymon.adamski\RiderProjects\szyfry\szyfry\obj\Debug\net8.0\refint\szyf
 D:\Users\szymon.adamski\RiderProjects\szyfry\szyfry\obj\Debug\net8.0\szyfry.pdb
 D:\Users\szymon.adamski\RiderProjects\szyfry\szyfry\obj\Debug\net8.0\szyfry.genruntimeconfig.cache
 D:\Users\szymon.adamski\RiderProjects\szyfry\szyfry\obj\Debug\net8.0\ref\szyfry.dll
+D:\Users\szymon.adamski\RiderProjects\szyfry\szyfry\obj\Debug\net8.0\szyfry.sourcelink.json

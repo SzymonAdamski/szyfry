@@ -1,0 +1,20 @@
+﻿@{
+ViewData["Title"] = "Szyfr Playfair";
+}
+
+<h2>Szyfr Playfair</h2>
+
+<form method="post" asp-action="Playfair">
+    <label>Tekst do zaszyfrowania:</label>
+    <input type="text" name="plaintext" />
+
+    <label>Klucz:</label>
+    <input type="text" name="key" />
+
+    <button type="submit">Szyfruj</button>
+</form>
+
+@if (ViewBag.EncryptedText != null)
+{
+<p><strong>Zaszyfrowany tekst:</strong> @ViewBag.EncryptedText</p>
+}

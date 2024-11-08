@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Szyfrowanie i Odszyfrowanie RSA";
+}
+
+<h2>Szyfrowanie RSA</h2>
+
+<!-- Formularz do szyfrowania -->
+<form method="post" asp-action="EncryptRSA">
+    <label>Tekst do zaszyfrowania:</label>
+    <input type="text" name="plaintext" required />
+    
+    <label>Klucz publiczny:</label>
+    <textarea name="publicKey" readonly>@ViewBag.PublicKey</textarea>
+    
+    <button type="submit">Szyfruj</button>
+</form>
+
+@if (ViewBag.EncryptedText != null)
+{
+    <p><strong>Zaszyfrowany tekst:</strong> @ViewBag.EncryptedText</p>
+}
+
+<hr />
+
+<h2>Odszyfrowanie RSA</h2>
+
+<!-- Formularz do odszyfrowania -->
+<form method="post" asp-action="DecryptRSA">
+    <label>Zaszyfrowany tekst:</label>
+    <textarea name="encryptedText" required>@ViewBag.EncryptedText</textarea>
+    
+    <label>Klucz prywatny:</label>
+    <textarea name="privateKey" readonly>@ViewBag.PrivateKey</textarea>
+    
+    <button type="submit">Odszyfruj</button>
+</form>
+
+@if (ViewBag.DecryptedText != null)
+{
+    <p><strong>Odszyfrowany tekst:</strong> @ViewBag.DecryptedText</p>
+}

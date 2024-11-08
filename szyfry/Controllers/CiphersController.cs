@@ -4,8 +4,60 @@ using System.Text;
 
 namespace szyfry.Controllers
 {
+
     public class CiphersController : Controller
     {
+        [HttpGet]
+        public IActionResult RSA()
+        {
+            // Inicjalizacja kluczy i przekazanie ich do widoku
+            var rsaCipher = new RSACipher();
+            ViewBag.PublicKey = rsaCipher.GeneratePublicKey();
+            ViewBag.PrivateKey = rsaCipher.GeneratePrivateKey();
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult EncryptRSA(string plaintext, string publicKey)
+        {
+            var rsaCipher = new RSACipher();
+        
+            // Szyfrowanie przy użyciu podanego klucza publicznego
+            string encryptedText = rsaCipher.Encrypt(plaintext, publicKey);
+        
+            // Przekazanie danych do widoku
+            ViewBag.EncryptedText = encryptedText;
+            ViewBag.PublicKey = publicKey;
+            return View("RSA");
+        }
+
+        [HttpPost]
+        public IActionResult DecryptRSA(string encryptedText, string privateKey)
+        {
+            var rsaCipher = new RSACipher();
+        
+            // Odszyfrowanie przy użyciu podanego klucza prywatnego
+            string decryptedText = rsaCipher.Decrypt(encryptedText, privateKey);
+        
+            // Przekazanie danych do widoku
+            ViewBag.DecryptedText = decryptedText;
+            ViewBag.PrivateKey = privateKey;
+            return View("RSA");
+        }
+        public IActionResult Playfair()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Playfair(string plaintext, string key)
+        {
+            PlayfairCipher cipher = new PlayfairCipher(key);
+            string encryptedText = cipher.Encrypt(plaintext);
+            ViewBag.EncryptedText = encryptedText;
+            return View();
+        }
         // GET: /Ciphers/Caesar
         [HttpGet]
         public IActionResult Caesar()

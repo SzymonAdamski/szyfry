@@ -30,8 +30,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lwaGVyc1xDYWVzYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Users/szymon.adamski/RiderProjects/szyfry/szyfry/Views/Ciphers/Playfair.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lwaGVyc1xQbGF5ZmFpci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Users/szymon.adamski/RiderProjects/szyfry/szyfry/Views/Ciphers/Polibius.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lwaGVyc1xQb2xpYml1cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Users/szymon.adamski/RiderProjects/szyfry/szyfry/Views/Ciphers/RSA.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2lwaGVyc1xSU0EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Users/szymon.adamski/RiderProjects/szyfry/szyfry/Views/Ciphers/Vigenere.cshtml]
